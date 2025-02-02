@@ -3,82 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Música Medieval - Espacio para tus Recursos</title>
+    <title>Música Medieval - Historia Interactiva</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
         }
         .container {
-            width: 80%;
             max-width: 800px;
+            margin: auto;
             background: white;
             padding: 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: left;
         }
-        .title {
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        h1, h2 {
             text-align: center;
             color: #2c3e50;
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .image-placeholder, .audio-placeholder {
-            margin: 15px 0;
-            padding: 20px;
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
+        .placeholder {
+            margin: 20px 0;
+            padding: 10px;
+            background: #ececec;
+            border: 1px dashed #ccc;
             text-align: center;
-            color: #888;
-            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">🎼 Música Medieval - Página Personalizable</h1>
-        <p>Aquí puedes añadir tus imágenes y audios relacionados con la música medieval. Usa los espacios indicados para integrar tu contenido.</p>
-
-        <div class="section">
-            <h2>📜 Canto Gregoriano</h2>
-            <!-- Espacio para la imagen del Canto Gregoriano -->
-            <div class="image-placeholder">Espacio para tu imagen (Canto Gregoriano)</div>
-
-            <p>El canto gregoriano es una forma de música litúrgica monódica, utilizada en la Iglesia Católica desde el siglo VI.</p>
-
-            <!-- Espacio para el audio del Canto Gregoriano -->
-            <div class="audio-placeholder">Espacio para tu audio (Canto Gregoriano)</div>
-        </div>
-
-        <div class="section">
-            <h2>🎭 Música Profana</h2>
-            <!-- Espacio para la imagen de Música Profana -->
-            <div class="image-placeholder">Espacio para tu imagen (Música Profana)</div>
-
-            <p>La música profana abarca las canciones populares de trovadores y juglares en la Edad Media, destacando temas de amor cortés y narraciones épicas.</p>
-
-            <!-- Espacio para el audio de Música Profana -->
-            <div class="audio-placeholder">Espacio para tu audio (Música Profana)</div>
-        </div>
-
-        <div class="section">
-            <h2>🎼 Polifonía</h2>
-            <!-- Espacio para la imagen de Polifonía -->
-            <div class="image-placeholder">Espacio para tu imagen (Polifonía)</div>
-
-            <p>La polifonía marcó un avance significativo en la música medieval, permitiendo la combinación de múltiples voces.</p>
-
-            <!-- Espacio para el audio de Polifonía -->
-            <div class="audio-placeholder">Espacio para tu audio (Polifonía)</div>
-        </div>
+    <div class="container" id="inicio">
+        <h1>🎼 Música Medieval - Historia Interactiva</h1>
+        <p>Explora en profundidad la música medieval a través de diferentes temáticas.</p>
+        <a href="#canto_gregoriano" class="button">Canto Gregoriano</a>
+        <a href="#musica_profana" class="button">Música Profana</a>
+        <a href="#polifonia" class="button">Polifonía</a>
+        <a href="#mujeres_musica" class="button">Mujeres en la Música</a>
     </div>
+
+    <div id="canto_gregoriano" class="container" style="display: none;">
+        <h2>📜 Canto Gregoriano</h2>
+        <p>El canto gregoriano es una forma de música litúrgica monódica, utilizada en la Iglesia Católica desde el siglo VI.</p>
+
+        <!-- Espacio para Imagen -->
+        <div class="placeholder">Espacio para la imagen del Canto Gregoriano</div>
+
+        <!-- Espacio para Audio -->
+        <div class="placeholder">Espacio para el audio del Canto Gregoriano</div>
+
+        <a href="#inicio" class="button" onclick="showSection('inicio')">Regresar</a>
+    </div>
+
+    <div id="musica_profana" class="container" style="display: none;">
+        <h2>🎭 Música Profana</h2>
+        <p>Fuera del ámbito eclesiástico, la música medieval incluyó expresiones populares interpretadas por trovadores y juglares.</p>
+
+        <!-- Espacio para Imagen -->
+        <div class="placeholder">Espacio para la imagen de Música Profana</div>
+
+        <!-- Espacio para Audio -->
+        <div class="placeholder">Espacio para el audio de Música Profana</div>
+
+        <a href="#inicio" class="button" onclick="showSection('inicio')">Regresar</a>
+    </div>
+
+    <div id="polifonia" class="container" style="display: none;">
+        <h2>🎼 Polifonía Medieval</h2>
+        <p>La polifonía marcó un avance significativo en la música medieval, permitiendo la combinación de múltiples voces.</p>
+
+        <!-- Espacio para Imagen -->
+        <div class="placeholder">Espacio para la imagen de Polifonía</div>
+
+        <!-- Espacio para Audio -->
+        <div class="placeholder">Espacio para el audio de Polifonía</div>
+
+        <a href="#inicio" class="button" onclick="showSection('inicio')">Regresar</a>
+    </div>
+
+    <div id="mujeres_musica" class="container" style="display: none;">
+        <h2>🎵 Mujeres en la Música Medieval</h2>
+        <p>Algunas mujeres desempeñaron un papel fundamental en la música medieval, como Hildegard von Bingen.</p>
+
+        <!-- Espacio para Imagen -->
+        <div class="placeholder">Espacio para la imagen de Mujeres en la Música</div>
+
+        <!-- Espacio para Audio -->
+        <div class="placeholder">Espacio para el audio de Mujeres en la Música</div>
+
+        <a href="#inicio" class="button" onclick="showSection('inicio')">Regresar</a>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll(".container").forEach(section => {
+                section.style.display = "none";
+            });
+            document.getElementById(sectionId).style.display = "block";
+        }
+        
+        document.querySelectorAll(".button").forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                let targetId = this.getAttribute("href").substring(1);
+                showSection(targetId);
+            });
+        });
+    </script>
 </body>
 </html>
